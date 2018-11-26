@@ -29,7 +29,7 @@
     <a class="btn btn-primary btn-lg" href="./display_orders.php" role="button">Display orders</a></br></br>
     <a class="btn btn-primary btn-lg" href="./display_orders.php" role="button">Update an order</a></br></br>
     <a class="btn btn-primary btn-lg" href="./display_orders.php" role="button">Delete an order <a></br></br>
-    <a class="btn btn-primary btn-lg" href="./index.php" role="button">Go back</a></br></br>
+    <a class="btn btn-primary-back btn-lg" href="./index.php" role="button">Go back</a></br></br></br></br>
   </p>
 </div>
 </div>

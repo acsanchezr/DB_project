@@ -31,7 +31,7 @@
     <a class="btn btn-primary btn-lg" href="./display_tow_trucks.php" role="button">Display tow trucks</a></br></br>
     <a class="btn btn-primary btn-lg" href="./display_tow_trucks.php" role="button">Update a tow truck</a></br></br>
     <a class="btn btn-primary btn-lg" href="./display_tow_trucks.php" role="button">Delete a tow truck <a></br></br>
-    <a class="btn btn-primary btn-lg" href="./index.php" role="button">Go back</a></br></br>
+    <a class="btn btn-primary-back btn-lg" href="./index.php" role="button">Go back</a></br></br>
   </p>
 </div>
 </div>

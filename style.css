@@ -19,6 +19,10 @@ a { color:white;}
   border-color: #F36D8A;
 }
 
+.btn-primary-back{
+  background-color: red;
+}
+
 /* HOME PAGE */
 .item1 { grid-area: header; }
 .item2 { grid-area: menu; }
