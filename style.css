@@ -30,13 +30,15 @@ a { color:white;}
     'header header header menu menu menu'
     'header header header menu menu menu'
     'header header header menu menu menu';
-  grid-gap: 40px;
+  vertical-align: center;
+  grid-gap: 20%;
   background-color: #BAD4D8;
   padding: 10px;
+  width:50%;
 }
 .grid-container > div {
-  background-color: #BAD4D8;
+  background-color:#BAD4D8;
   text-align: center;
-  padding: 20px 0;
+  padding: 20px;
   font-size: 30px;
 }

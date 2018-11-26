@@ -19,9 +19,7 @@
   <div class="grid-container">
       <div class="item1"> 
   <h1 class="display-4">Cars</h1>
-  <p class="lead">Here you can check the cars that </br>
-  are currently in our inventory, as well as add, </br>
-update, and delete existing cars. </p>
+  <p class="lead">Here you can check the cars that are currently in our inventory, as well as add, update, and delete existing cars. </p>
 <img src="./towtruck.png" width="680" height="380">
 </div>
 

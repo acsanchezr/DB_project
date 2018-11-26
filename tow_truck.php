@@ -15,8 +15,16 @@
 	?>
 
 <div class="jumbotron">
+
+  <div class="grid-container">
+    <div class="item1">
   <h1 class="display-4">Tow Trucks</h1>
   <p class="lead">Here you can check the tow trucks that are currently in our inventory, as well as add, update, and delete existing tow trucks. </p>
+  <img src="./towtruck.png" width="680" height="380">
+
+</div>
+
+<div class="item2">
   <hr class="my-4">
   <p>What would you like to do? </p>
   <p class="lead">
@@ -24,10 +32,9 @@
     <a class="btn btn-primary btn-lg" href="./display_tow_trucks.php" role="button">Update a tow truck</a></br></br>
     <a class="btn btn-primary btn-lg" href="./display_tow_trucks.php" role="button">Delete a tow truck <a></br></br>
     <a class="btn btn-primary btn-lg" href="./index.php" role="button">Go back</a></br></br>
-   
-
-
   </p>
+</div>
+</div>
 </div>
 
 <?php 

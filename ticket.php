@@ -15,19 +15,26 @@
 	?>
 
 <div class="jumbotron">
-  <h1 class="display-4">Tickets</h1>
-  <p class="lead">Here you can check the tickets that are currently in our inventory, as well as add, update, and delete existing tickets. </p>
-  <hr class="my-4">
-  <p>What would you like to do? </p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" href="./display_tickets.php" role="button">Display tickets</a></br></br>
-    <a class="btn btn-primary btn-lg" href="./display_tickets.php" role="button">Update a ticket</a></br></br>
-    <a class="btn btn-primary btn-lg" href="./display_tickets.php" role="button">Delete a ticket <a></br></br>
-    <a class="btn btn-primary btn-lg" href="./index.php" role="button">Go back</a></br></br>
-   
 
+  <div class="grid-container">
 
-  </p>
+    <div class="item1">
+      <h1 class="display-4">Tickets</h1>
+      <p class="lead">Here you can check the tickets that are currently in our inventory, as well as add, update, and delete existing tickets. </p>
+      <img src="./towtruck.png" width="680" height="380">
+    </div>
+  
+  <div class="item2">
+    <hr class="my-4">
+    <p>What would you like to do? </p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="./display_tickets.php" role="button">Display tickets</a></br></br>
+      <a class="btn btn-primary btn-lg" href="./display_tickets.php" role="button">Update a ticket</a></br></br>
+      <a class="btn btn-primary btn-lg" href="./display_tickets.php" role="button">Delete a ticket <a></br></br>
+      <a class="btn btn-primary btn-lg" href="./index.php" role="button">Go back</a></br></br>
+    </p>
+  </div>
+
 </div>
 
 <?php 
