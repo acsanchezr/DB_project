@@ -24,9 +24,6 @@
     <a class="btn btn-primary btn-lg" href="./display_orders.php" role="button">Update an order</a></br></br>
     <a class="btn btn-primary btn-lg" href="./display_orders.php" role="button">Delete an order <a></br></br>
     <a class="btn btn-primary btn-lg" href="./index.php" role="button">Go back</a></br></br>
-   
-
-
   </p>
 </div>
 
