@@ -1,0 +1,42 @@
+html { overflow-y: hidden; }  /*hide scrollbar*/
+
+a { color:white;}
+
+.jumbotron {
+   background-color:#BAD4D8;
+   color:white;
+   font-family: 'Nunito', sans-serif;
+   padding-top:2%;
+}
+
+/*Buttons*/
+.btn-lg {
+   padding:10px 45px 13px 45px;
+}
+
+.btn-primary { 
+  background-color: #F36D8A; 
+  border-color: #F36D8A;
+}
+
+/* HOME PAGE */
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header menu menu menu'
+    'header header header menu menu menu'
+    'header header header menu menu menu'
+    'header header header menu menu menu';
+  grid-gap: 40px;
+  background-color: #BAD4D8;
+  padding: 10px;
+}
+.grid-container > div {
+  background-color: #BAD4D8;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
