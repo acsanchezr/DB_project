@@ -29,6 +29,7 @@
   <p>What would you like to do? </p>
   <p class="lead">
     <a class="btn btn-primary btn-lg" href="./display_cars.php" role="button">Display cars</a></br></br>
+    <a class="btn btn-primary btn-lg" href="./add_car_form.php" role="button">Add a car</a></br></br>
     <a class="btn btn-primary btn-lg" href="./display_cars.php" role="button">Update a car</a></br></br>
     <a class="btn btn-primary btn-lg" href="./display_cars.php" role="button">Delete a car <a></br></br>
     <a class="btn btn-primary-back btn-lg" href="./index.php" role="button">Go back</a></br></br>
