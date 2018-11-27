@@ -23,7 +23,7 @@ include "connection.php";
         }
     }
     else {
-        echo "ERROR: Missing parameters"
+        echo "ERROR: Missing parameters";
     }
     mysqli_close($conn);
 ?>
