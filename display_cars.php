@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300|Niramit|Nunito" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="./style.css">
+<link rel="stylesheet" type="text/css" href="animate.css">
+</head>
+
+<body>
+<div class="functions">
+<h1>Displaying cars</h1>
+
 <?php
 /*TEST to check db can be accessed - WORKS*/
 
@@ -20,3 +35,9 @@ include "connection.php";
 		    echo "0 results in CAR";
 		}
 ?>
+
+</br></br>
+<a class="btn btn-primary btn-lg" href="./cars.php" role="button">go back<a></br></br>
+</div>
+</body>
+</html>

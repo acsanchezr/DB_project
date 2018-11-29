@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Edit Record Form</title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300|Niramit|Nunito" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="./style.css">
+<link rel="stylesheet" type="text/css" href="animate.css">
+<title>Add Record Form</title>
 </head>
+
 <body>
 <?php
 /*TEST to check db can be accessed - WORKS*/
@@ -77,6 +83,9 @@ include "connection.php";
 		    echo "0 results in EMPLOYEE";
 		}
 ?>
+
+<div class="functions">
+<h1>Edit employee</h1>
 <form action="<?php $_PHP_SELF ?>" method="post">
     <h3>Please fill in the areas you want to modify with the correct ID.</h3>
     <p>
@@ -97,6 +106,11 @@ include "connection.php";
     </p>
     
     <input type="submit" value="Submit">
-</form>
+
+</br></br>
+<a class="btn btn-primary btn-lg" href="./employee.php" role="button">go back<a></br></br>
+</div>
+</body>
+</html>
 </body>
 </html>
