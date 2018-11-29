@@ -1,8 +1,8 @@
-html { overflow-y: hidden; }  /*hide scrollbar*/
 
 a { color:white;}
 
 .jumbotron {
+ overflow-y: hidden;  /*hide scrollbar*/
    background-color:#BAD4D8;
    color:white;
    font-family: 'Nunito', sans-serif;

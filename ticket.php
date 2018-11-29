@@ -29,7 +29,7 @@
     <p>What would you like to do? </p>
     <p class="lead">
       <a class="btn btn-primary btn-lg" href="./display_tickets.php" role="button">Display tickets</a></br></br>
-      <a class="btn btn-primary btn-lg" href="./display_tickets.php" role="button">Update a ticket</a></br></br>
+      <a class="btn btn-primary btn-lg" href="./add_ticket_form.php" role="button">Add a ticket</a></br></br>
       <a class="btn btn-primary btn-lg" href="./display_tickets.php" role="button">Delete a ticket <a></br></br>
       <a class="btn btn-primary-back btn-lg" href="./index.php" role="button">Go back</a></br></br>    
     </p>
