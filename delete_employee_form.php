@@ -19,7 +19,7 @@ include "connection.php";
 	
     /* This runs only after the form submitted */
 	
-	if(isset($_POST['id'])) {
+	if(isset($_POST['id']) && $_POST['id'] != "") {
         $sql = "DELETE FROM employee WHERE id = " . $_REQUEST['id'];
         $result = $conn->query($sql);
         if(!$result) {
