@@ -24,7 +24,6 @@ include "connection.php";
         $result = $conn->query($sql);
         if(!$result) {
             trigger_error('Invalid query: ' . $conn->error);
-            echo "No employee found under id: " . $_REQUEST['id'];
         } 
         else {
             // Record deleted successfully
