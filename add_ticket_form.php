@@ -19,7 +19,8 @@
 include "connection.php";
 /*rest of the code*/
     /*test*/
-    if($_REQUEST['reason'] != "" && $_REQUEST['description'] != "" && $_REQUEST['date_paid'] != "" && $_REQUEST['time_paid'] != "") {
+    
+    if(isset($_POST['reason']) && ($_REQUEST['reason'] != "" && $_REQUEST['description'] != "" && $_REQUEST['date_paid'] != "" && $_REQUEST['time_paid'] != "")) {
         $sql = "INSERT INTO ticket (reason, description, date_paid, time_paid) VALUES ('$_REQUEST[reason]', '$_REQUEST[description]', '$_REQUEST[date_paid]', '$_REQUEST[time_paid]')";
         /* query database */
         if(mysqli_query($conn, $sql)){
@@ -29,7 +30,9 @@ include "connection.php";
         }
     }
     else {
-        echo "ERROR: Missing paramaters";
+        // Do nothing. 
+        // The form was not filled so nothing should run untill it is and sent
+        echo "Form not filled";
     }
     mysqli_close($conn)
 ?>
@@ -39,19 +42,19 @@ include "connection.php";
 <form action="<?php $_PHP_SELF ?>" method="post">
     <p>
         <label for="reason"> reason:</label>
-        <input type="text" reason="reason">
+        <input type="text" name="reason">
     </p>
     <p>
-        <label for="description">description:</label>
-        <input type="text" reason="description">
+        <label for="description">description :</label>
+        <input type="text" name="description">
     </p>
     <p>
         <label for="date_paid">date_paid :</label>
-        <input type="text" reason="date_paid">
+        <input type="text" name="date_paid">
     </p>
     <p>
         <label for="time_paid">time_paid :</label>
-        <input type="text" reason="time_paid">
+        <input type="text" name="time_paid">
     </p>
     <input type="submit" value="Submit">
 </form>
