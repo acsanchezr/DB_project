@@ -20,8 +20,8 @@ include "connection.php";
 /*rest of the code*/
     /*test*/
 
-    if(isset($_POST['reason']) && ($_REQUEST['reason'] != "" && $_REQUEST['description'] != "" && $_REQUEST['date_paid'] != "" && $_REQUEST['time_paid'] != "")) {
-        $sql = "INSERT INTO ticket (reason, description, date_paid, time_paid) VALUES ('$_REQUEST[reason]', '$_REQUEST[description]', '$_REQUEST[date_paid]', '$_REQUEST[time_paid]')";
+    if(isset($_POST['plate']) && ($_REQUEST['plate'] != "" && $_REQUEST['brand'] != "")) {
+        $sql = "INSERT INTO truck (plate,brand) VALUES ('$_REQUEST[plate]', '$_REQUEST[brand]')";
         /* query database */
         if(mysqli_query($conn, $sql)){
             echo "Records added successfully.";
@@ -38,30 +38,22 @@ include "connection.php";
 ?>
 
 
-<h1>Add a ticket</h1>
+<h1>Add a truck</h1>
 <form action="<?php $_PHP_SELF ?>" method="post">
     <p>
-        <label for="reason"> reason:</label>
-        <input type="text" name="reason">
+        <label for="plate"> Plate number:</label>
+        <input type="text" name="plate">
     </p>
     <p>
-        <label for="description">description :</label>
-        <input type="text" name="description">
-    </p>
-    <p>
-        <label for="date_paid">date_paid :</label>
-        <input type="text" name="date_paid">
-    </p>
-    <p>
-        <label for="time_paid">time_paid :</label>
-        <input type="text" name="time_paid">
+        <label for="brand">Brand:</label>
+        <input type="text" name="brand">
     </p>
     <input type="submit" value="Submit">
 </form>
 
 
 </br></br>
-<a class="btn btn-primary btn-lg" href="./ticket.php" role="button">go back<a></br></br>
+<a class="btn btn-primary btn-lg" href="./tow_truck.php" role="button">go back<a></br></br>
 </div>
 </body>
 </html>
