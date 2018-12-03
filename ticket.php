@@ -10,8 +10,8 @@
 <title>Database Project</title>
 </head>
 <body>
-	<?php 
-		include "connection.php"; // connect to db 
+	<?php
+		include "connection.php"; // connect to db
 	?>
 
 <div class="jumbotron">
@@ -23,25 +23,22 @@
       <p class="lead">Here you can check the tickets that are currently in our inventory, as well as add, update, and delete existing tickets. </p>
       <img src="./towtruck.png" width="680" height="380">
     </div>
-  
+
   <div class="item2">
     <hr class="my-4">
     <p>What would you like to do? </p>
     <p class="lead">
       <a class="btn btn-primary btn-lg" href="./display_tickets.php" role="button">Display tickets</a></br></br>
       <a class="btn btn-primary btn-lg" href="./add_ticket_form.php" role="button">Add a ticket</a></br></br>
-      <a class="btn btn-primary btn-lg" href="./display_tickets.php" role="button">Delete a ticket <a></br></br>
-      <a class="btn btn-primary-back btn-lg" href="./index.php" role="button">Go back</a></br></br>    
+      <a class="btn btn-primary btn-lg" href="./delete_ticket_form.php" role="button">Delete a ticket <a></br></br>
+      <a class="btn btn-primary-back btn-lg" href="./index.php" role="button">Go back</a></br></br>
     </p>
   </div>
 
 </div>
 
-<?php 
+<?php
 	$conn->close();	//close connection
 ?>
 </body>
 </html>
-
-
-
