@@ -10,14 +10,14 @@
 <title>Database Project</title>
 </head>
 <body>
-	<?php 
-		include "connection.php"; // connect to db 
+	<?php
+		include "connection.php"; // connect to db
 	?>
 
 <div class="jumbotron">
 
   <div class="grid-container">
-      <div class="item1"> 
+      <div class="item1">
   <h1 class="display-4">Cars</h1>
   <p class="lead">Here you can check the cars that are currently in our inventory, as well as add, update, and delete existing cars. </p>
 <img src="./towtruck.png" width="680" height="380">
@@ -31,7 +31,7 @@
     <a class="btn btn-primary btn-lg" href="./display_cars.php" role="button">Display cars</a></br></br>
     <a class="btn btn-primary btn-lg" href="./add_car_form.php" role="button">Add a car</a></br></br>
     <a class="btn btn-primary btn-lg" href="./display_cars.php" role="button">Update a car</a></br></br>
-    <a class="btn btn-primary btn-lg" href="./display_cars.php" role="button">Delete a car <a></br></br>
+    <a class="btn btn-primary btn-lg" href="./delete_car_form.php" role="button">Delete a car <a></br></br>
     <a class="btn btn-primary-back btn-lg" href="./index.php" role="button">Go back</a></br></br>
      </p>
 </div></div>
@@ -39,11 +39,8 @@
 
 </div>
 
-<?php 
+<?php
 	$conn->close();	//close connection
 ?>
 </body>
 </html>
-
-
-
