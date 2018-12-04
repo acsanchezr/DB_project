@@ -20,8 +20,8 @@ include "../connection.php";
 /*rest of the code*/
     /*test*/
 
-    if(isset($_POST['reason']) && ($_REQUEST['reason'] != "" && $_REQUEST['description'] != "" && $_REQUEST['date_paid'] != "" && $_REQUEST['time_paid'] != "")) {
-        $sql = "INSERT INTO ticket (reason, description, date_paid, time_paid) VALUES ('$_REQUEST[reason]', '$_REQUEST[description]', '$_REQUEST[date_paid]', '$_REQUEST[time_paid]')";
+    if(isset($_POST['truck_plate']) && ($_REQUEST['truck_plate'] != "" && $_REQUEST['car_plate'] != "" && $_REQUEST['init_loc'] != "" && $_REQUEST['final_loc'] != "" && $_REQUEST['date'] != "" && $_REQUEST['time'] != "")) {
+        $sql = "INSERT INTO towed (truck_plate, car_plate, init_loc, final_loc, date, time) VALUES ('$_REQUEST[truck_plate]', '$_REQUEST[car_plate]', '$_REQUEST[init_loc]', '$_REQUEST[final_loc]', '$_REQUEST[date]', '$_REQUEST[time]')";
         /* query database */
         if(mysqli_query($conn, $sql)){
             echo "Records added successfully.";
@@ -41,27 +41,35 @@ include "../connection.php";
 <h1>Add a ticket</h1>
 <form action="<?php $_PHP_SELF ?>" method="post">
     <p>
-        <label for="reason"> reason:</label>
-        <input type="text" name="reason">
+        <label for="truck_plate"> Truck plate:</label>
+        <input type="text" name="truck_plate">
     </p>
     <p>
-        <label for="description">description :</label>
-        <input type="text" name="description">
+        <label for="car_plate">Car plate :</label>
+        <input type="text" name="car_plate">
     </p>
     <p>
-        <label for="date_paid">date_paid :</label>
-        <input type="text" name="date_paid">
+        <label for="init_loc">Initial Location :</label>
+        <input type="text" name="init_loc">
     </p>
     <p>
-        <label for="time_paid">time_paid :</label>
-        <input type="text" name="time_paid">
+        <label for="final_loc">Final Location :</label>
+        <input type="text" name="final_loc">
+    </p>
+    <p>
+        <label for="date">Date :</label>
+        <input type="text" name="date">
+    </p>
+    <p>
+        <label for="time">Time :</label>
+        <input type="text" name="time">
     </p>
     <input type="submit" value="Submit">
 </form>
 
 
 </br></br>
-<a class="btn btn-primary btn-lg" href="../ticket.php" role="button">go back<a></br></br>
+<a class="btn btn-primary btn-lg" href="../order.php" role="button">go back<a></br></br>
 </div>
 </body>
 </html>
