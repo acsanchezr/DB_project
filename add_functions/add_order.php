@@ -16,7 +16,7 @@
 <?php
 /*TEST to check db can be accessed - WORKS*/
 
-include "connection.php";
+include "../connection.php";
 /*rest of the code*/
     /*test*/
 
@@ -61,7 +61,7 @@ include "connection.php";
 
 
 </br></br>
-<a class="btn btn-primary btn-lg" href="./ticket.php" role="button">go back<a></br></br>
+<a class="btn btn-primary btn-lg" href="../ticket.php" role="button">go back<a></br></br>
 </div>
 </body>
 </html>

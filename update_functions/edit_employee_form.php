@@ -14,36 +14,36 @@
 <?php
 /*TEST to check db can be accessed - WORKS*/
 
-include "connection.php";
+include "../connection.php";
 /*rest of the code*/
-	
-    /* This runs only after the form submitted 
+
+    /* This runs only after the form submitted
        This can obviouly be improved than just a bunch of lazy ifs */
-	
+
 	if(isset($_POST['id']) && ($_REQUEST['name'] != "" || $_REQUEST['address'] != "" || $_REQUEST['phone'] != "")) {
         $id = $_POST['id'];
         $sql = "SELECT * FROM employee WHERE ID = " . $id;
         $result = $conn->query($sql);
         if(!$result) {
             trigger_error('Invalid query: ' . $conn->error);
-        } 
-        elseif ($result->num_rows > 0) {  
+        }
+        elseif ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
                 if($_REQUEST['name'] != "") {
                     $name = $_REQUEST['name'];
-                } 
+                }
                 else {
                     $name = $row["name"];
                 }
                 if($_REQUEST['address'] != "") {
                     $address = $_REQUEST['address'];
-                } 
+                }
                 else {
                     $address = $row["address"];
                 }
                 if($_REQUEST['phone'] != "") {
                     $phone = $_REQUEST['phone'];
-                } 
+                }
                 else {
                     $phone = $row["phone_num"];
                 }
@@ -104,11 +104,11 @@ include "connection.php";
         <label for="phone">Phone Number:</label>
         <input type="text" name="phone">
     </p>
-    
+
     <input type="submit" value="Submit">
 
 </br></br>
-<a class="btn btn-primary btn-lg" href="./employee.php" role="button">go back<a></br></br>
+<a class="btn btn-primary btn-lg" href="../employee.php" role="button">go back<a></br></br>
 </div>
 </body>
 </html>

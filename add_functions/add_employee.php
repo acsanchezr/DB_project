@@ -1,7 +1,7 @@
 <?php
 /*TEST to check db can be accessed - WORKS*/
 
-include "connection.php";
+include "../connection.php";
 /*rest of the code*/
     /*test*/
     if($_REQUEST['name'] != "" && $_REQUEST['address'] != "" && $_REQUEST['phone'] != "") {

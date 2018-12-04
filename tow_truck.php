@@ -28,10 +28,10 @@
   <hr class="my-4">
   <p>What would you like to do? </p>
   <p class="lead">
-		<a class="btn btn-primary btn-lg" href="./add_tow_truck.php" role="button">Add tow truck</a></br></br>
-    <a class="btn btn-primary btn-lg" href="./display_tow_trucks.php" role="button">Display tow trucks</a></br></br>
-    <a class="btn btn-primary btn-lg" href="./display_tow_trucks.php" role="button">Update a tow truck</a></br></br>
-    <a class="btn btn-primary btn-lg" href="./delete_towtruck_form.php" role="button">Delete a tow truck <a></br></br>
+		<a class="btn btn-primary btn-lg" href="./add_functions/add_tow_truck.php" role="button">Add tow truck</a></br></br>
+    <a class="btn btn-primary btn-lg" href="./display_functions/display_tow_trucks.php" role="button">Display tow trucks</a></br></br>
+    <a class="btn btn-primary btn-lg" href="./update_functions/display_tow_trucks.php" role="button">Update a tow truck</a></br></br>
+    <a class="btn btn-primary btn-lg" href="./delete_functions/delete_towtruck_form.php" role="button">Delete a tow truck <a></br></br>
     <a class="btn btn-primary-back btn-lg" href="./index.php" role="button">Go back</a></br></br>
   </p>
 </div>

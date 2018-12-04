@@ -10,8 +10,8 @@
 <title>Database Project</title>
 </head>
 <body>
-	<?php 
-		include "connection.php"; // connect to db 
+	<?php
+		include "connection.php"; // connect to db
 	?>
 
 <div class="jumbotron">
@@ -28,10 +28,10 @@
         <hr class="my-4">
         <p>What would you like to do? </p>
         <p class="lead">
-        <a class="btn btn-primary btn-lg" href="./display_employees.php" role="button">Display employees</a></br></br>
-        <a class="btn btn-primary btn-lg" href="./add_employee_form.php" role="button">Add an employee</a></br></br>
-        <a class="btn btn-primary btn-lg" href="./edit_employee_form.php" role="button">Update an employee</a></br></br>
-        <a class="btn btn-primary btn-lg" href="./delete_employee_form.php" role="button">Delete an employee <a></br></br>
+        <a class="btn btn-primary btn-lg" href="./display_functions/display_employees.php" role="button">Display employees</a></br></br>
+        <a class="btn btn-primary btn-lg" href="./add_functions/add_employee_form.php" role="button">Add an employee</a></br></br>
+        <a class="btn btn-primary btn-lg" href="./update_functions/edit_employee_form.php" role="button">Update an employee</a></br></br>
+        <a class="btn btn-primary btn-lg" href="./delete_functions/delete_employee_form.php" role="button">Delete an employee <a></br></br>
         <a class="btn btn-primary-back btn-lg" href="./index.php" role="button">Go back</a></br></br>
         </p>
       </div>
@@ -40,7 +40,7 @@
 
 </div>
 
-<?php 
+<?php
 	$conn->close();	//close connection
 ?>
 </body>

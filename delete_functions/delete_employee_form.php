@@ -14,20 +14,20 @@
 <?php
 /*TEST to check db can be accessed - WORKS*/
 
-include "connection.php";
+include "../connection.php";
 /*rest of the code*/
 
     /* This runs only after the form submitted */
 
-	if(isset($_POST['plate']) && $_POST['plate'] != "") {
-        $sql = "DELETE FROM car WHERE plate = " . $_REQUEST['plate'];
+	if(isset($_POST['id']) && $_POST['id'] != "") {
+        $sql = "DELETE FROM employee WHERE id = " . $_REQUEST['id'];
         $result = $conn->query($sql);
         if(!$result) {
             trigger_error('Invalid query: ' . $conn->error);
         }
         else {
             // Record deleted successfully
-            echo "Car deleted<br>";
+            echo "Employee deleted<br>";
         }
     }
 
@@ -35,7 +35,7 @@ include "connection.php";
 
 
     // Redisplay the page as normal
-    $sql = "SELECT * FROM car";
+    $sql = "SELECT * FROM employee";
 	/* query database */
 	$result = $conn->query($sql);
 	if (!$result) {
@@ -43,28 +43,28 @@ include "connection.php";
 	}
 		if ($result->num_rows > 0) {
 		    // output data of each row
-          while($row = $result->fetch_assoc()) {
-        echo "Plate: " . $row["plate"].
-                " - Brand: " . $row["brand"]. " - Color:" . $row["color"].
-                " - Impounded:".$row["impounded"]. " -Serviced:".$row["serviced"]."<br>";}
-      } else {
-          echo "0 results in CAR";
-      }
+		    while($row = $result->fetch_assoc()) {
+		 	echo "Employee ID: " . $row["ID"].
+							" - Name: " . $row["name"]. " - Address:" . $row["address"].
+							" - Phone number:".$row["phone_num"]."<br>";}
+		} else {
+		    echo "0 results in EMPLOYEE";
+		}
 ?>
 
 <div class="functions">
-<h1>Delete a car</h1>
+<h1>Delete an employee</h1>
 <form action="<?php $_PHP_SELF ?>" method="post">
-    <h3>Please type in a plate number.</h3>
+    <h3>Please type in an ID.</h3>
     <p>
-        <label for="plate">Plate:</label>
-        <input type="text" name="plate">
+        <label for="id">ID:</label>
+        <input type="text" name="id">
     </p>
 
     <input type="submit" value="Submit">
 
 </br></br>
-<a class="btn btn-primary btn-lg" href="./cars.php" role="button">go back<a></br></br>
+<a class="btn btn-primary btn-lg" href="../employee.php" role="button">go back<a></br></br>
 </div>
 </body>
 </html>

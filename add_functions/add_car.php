@@ -2,7 +2,7 @@
 <?php
 /*TEST to check db can be accessed - WORKS*/
 
-include "connection.php";
+include "../connection.php";
 /*rest of the code*/
     /*test*/
     // Small if statement to handle the checkbox in the form

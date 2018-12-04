@@ -14,20 +14,20 @@
 <?php
 /*TEST to check db can be accessed - WORKS*/
 
-include "connection.php";
+include "../connection.php";
 /*rest of the code*/
 
     /* This runs only after the form submitted */
 
-	if(isset($_POST['plate']) && $_POST['plate'] != "") {
-        $sql = "DELETE FROM truck WHERE plate = " . $_REQUEST['plate'];
+	if(isset($_POST['id']) && $_POST['id'] != "") {
+        $sql = "DELETE FROM ticket WHERE id = " . $_REQUEST['id'];
         $result = $conn->query($sql);
         if(!$result) {
             trigger_error('Invalid query: ' . $conn->error);
         }
         else {
             // Record deleted successfully
-            echo "Tow Truck deleted<br>";
+            echo "Ticket deleted<br>";
         }
     }
 
@@ -35,7 +35,7 @@ include "connection.php";
 
 
     // Redisplay the page as normal
-    $sql = "SELECT * FROM truck";
+    $sql = "SELECT * FROM ticket";
 	/* query database */
 	$result = $conn->query($sql);
 	if (!$result) {
@@ -43,27 +43,29 @@ include "connection.php";
 	}
 		if ($result->num_rows > 0) {
 		    // output data of each row
-        while($row = $result->fetch_assoc()) {
-		 	echo "Plate: " . $row["plate"].
-							" - Brand: " . $row["brand"]."<br>";}
-		} else {
-		    echo "0 results in TRUCK";
-		}
+        // output data of each row
+      while($row = $result->fetch_assoc()) {
+      echo "Ticket ID: " . $row["ID"].
+              " - Reason: " . $row["reason"]. " - Description:" . $row["description"].
+              " - Date paid:".$row["date_paid"]. " - Time paid:".$row["time_paid"]."<br>";}
+    } else {
+        echo "0 results in TICKET";
+    }
 ?>
 
 <div class="functions">
-<h1>Delete a tow truck</h1>
+<h1>Delete a ticket</h1>
 <form action="<?php $_PHP_SELF ?>" method="post">
-    <h3>Please type in a plate number.</h3>
+    <h3>Please type in an ID.</h3>
     <p>
-        <label for="plate">Plate number:</label>
-        <input type="text" name="plate">
+        <label for="id">ID:</label>
+        <input type="text" name="id">
     </p>
 
     <input type="submit" value="Submit">
 
 </br></br>
-<a class="btn btn-primary btn-lg" href="./tow_truck.php" role="button">go back<a></br></br>
+<a class="btn btn-primary btn-lg" href="../ticket.php" role="button">go back<a></br></br>
 </div>
 </body>
 </html>

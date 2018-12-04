@@ -10,15 +10,15 @@
 <title>Database Project</title>
 </head>
 <body>
-	<?php 
-		include "connection.php"; // connect to db 
+	<?php
+		include "connection.php"; // connect to db
 	?>
 
 <div class="jumbotron">
 <div class="grid-container">
   <div class="item1">
   <h1 class="display-4">Orders</h1>
-  <p class="lead">Here you can check the orders that are currently in our inventory, as well as add, update, and delete existing orders. </p>
+  <p class="lead">Here you can check current orders, as well as add, update, and delete them. </p>
   <img src="./towtruck.png" width="680" height="380">
 </div>
 
@@ -26,20 +26,17 @@
   <hr class="my-4">
   <p>What would you like to do? </p>
   <p class="lead">
-    <a class="btn btn-primary btn-lg" href="./display_orders.php" role="button">Display orders</a></br></br>
-    <a class="btn btn-primary btn-lg" href="./display_orders.php" role="button">Update an order</a></br></br>
-    <a class="btn btn-primary btn-lg" href="./display_orders.php" role="button">Delete an order <a></br></br>
+    <a class="btn btn-primary btn-lg" href="./display_functions/display_orders.php" role="button">Display orders</a></br></br>
+    <a class="btn btn-primary btn-lg" href="./update_functions/display_orders.php" role="button">Update an order</a></br></br>
+    <a class="btn btn-primary btn-lg" href="./delete_functions/display_orders.php" role="button">Delete an order <a></br></br>
     <a class="btn btn-primary-back btn-lg" href="./index.php" role="button">Go back</a></br></br></br></br>
   </p>
 </div>
 </div>
 </div>
 
-<?php 
+<?php
 	$conn->close();	//close connection
 ?>
 </body>
 </html>
-
-
-

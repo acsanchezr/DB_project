@@ -12,26 +12,32 @@
 
 <body>
 <div class="functions">
-<h1>Add employee</h1>
-<form action="add_employee.php" method="post">
+
+<h1>Add a car</h1>
+
+<form action="add_car.php" method="post">
     <p>
-        <label for="name">Full Name:</label>
-        <input type="text" name="name">
+        <label for="plate">Plate:</label>
+        <input type="text" name="plate">
     </p>
     <p>
-        <label for="address">Address:</label>
-        <input type="text" name="address">
+        <label for="brand">Brand:</label>
+        <input type="text" name="brand">
     </p>
     <p>
-        <label for="phone">Phone Number:</label>
-        <input type="text" name="phone">
+        <label for="color">Color:</label>
+        <input type="text" name="color">
+    </p>
+    <p>
+        <label for="violation_bool">Towed for violation?</label>
+        <input type="checkbox" name="violation_bool" value="1">
     </p>
     <input type="submit" value="Submit">
 </form>
 
 
 </br></br>
-<a class="btn btn-primary btn-lg" href="./employee.php" role="button">go back<a></br></br>
+<a class="btn btn-primary btn-lg" href="../cars.php" role="button">go back<a></br></br>
 </div>
 </body>
 </html>
