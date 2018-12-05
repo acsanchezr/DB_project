@@ -21,7 +21,7 @@ include "../connection.php";
        This can obviouly be improved than just a bunch of lazy ifs */
     
     // This if is for when the user wants to change both the plate and brand
-	if($_REQUEST['plate'] != "" && $_REQUEST['plate_n'] != "" && $_REQUEST['brand'] != "") {
+	if(isset($_POST['plate']) && $_REQUEST['plate'] != "" && $_REQUEST['plate_n'] != "" && $_REQUEST['brand'] != "") {
         $plate_n = $_REQUEST['plate_n'];
         $plate = $_REQUEST['plate'];
         $sql = $conn->prepare('UPDATE truck SET plate=?, brand=? WHERE plate=?');
@@ -100,7 +100,7 @@ include "../connection.php";
     <input type="submit" value="Submit">
 
 </br></br>
-<a class="btn btn-primary btn-lg" href="./employee.php" role="button">go back<a></br></br>
+<a class="btn btn-primary btn-lg" href="../tow_truck.php" role="button">go back<a></br></br>
 </div>
 </body>
 </html>
