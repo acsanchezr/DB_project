@@ -33,7 +33,7 @@ include "../connection.php";
             die($sql->error);
         }
     }
-    elseif($_REQUEST['plate'] != "" && $_REQUEST['brand'] != "" && $_REQUEST['plate_n'] == "") {
+    elseif(isset($_POST['plate']) && $_REQUEST['plate'] != "" && $_REQUEST['brand'] != "" && $_REQUEST['plate_n'] == "") {
         // This runs when the user only wants to change the plate
         // and nothing else
         $plate = $_REQUEST['plate'];
@@ -46,7 +46,7 @@ include "../connection.php";
             die($sql->error);
         }
     }
-    elseif($_REQUEST['plate'] != "" && $_REQUEST['plate_n'] != "") {
+    elseif(isset($_POST['plate']) && $_REQUEST['plate'] != "" && $_REQUEST['plate_n'] != "") {
         // This is for when they only want to change the plate
         $plate_n = $_REQUEST['plate_n'];
         $plate = $_REQUEST['plate'];
