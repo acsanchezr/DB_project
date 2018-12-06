@@ -16,10 +16,10 @@
 
 include "../connection.php";
 /*rest of the code*/
-	
-    /* This runs only after the form submitted 
+
+    /* This runs only after the form submitted
        This can obviouly be improved than just a bunch of lazy ifs */
-    
+
     // This if is for when the user wants to change plate and anything else
 	if(isset($_POST['plate']) && ($_REQUEST['plate'] != "" && $_REQUEST['plate_n'] != "")) {
         $plate_n = $_REQUEST['plate_n'];
@@ -148,11 +148,11 @@ include "../connection.php";
         <label for="flip">Change whether impounded or serviced?:</label>
         <input type="checkbox" name="flip" value="1">
     </p>
-    
+
     <input type="submit" value="Submit">
 
 </br></br>
-<a class="btn btn-primary btn-lg" href="./employee.php" role="button">go back<a></br></br>
+<a class="btn btn-primary btn-lg" href="../cars.php" role="button">go back<a></br></br>
 </div>
 </body>
 </html>
