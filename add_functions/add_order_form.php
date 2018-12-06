@@ -34,20 +34,56 @@ include "../connection.php";
         // The form was not filled so nothing should run untill it is and sent
       //  echo "Form not filled";
     }
-    mysqli_close($conn)
+    
 ?>
 
 
 <h1>Add a ticket</h1>
+<h5>Please choose registered vehicles. If there are none, please add some.</h5>
 <form action="<?php $_PHP_SELF ?>" method="post">
     <p>
         <label for="truck_plate"> Truck plate:</label>
-        <input type="text" name="truck_plate">
+        <input type="text" name="truck_plate"></br>
+        <?php
+            $sql = "SELECT * FROM truck";
+            /* query database */
+            $result = $conn->query($sql);
+            if (!$result) {
+                trigger_error('Invalid query: ' . $conn->error);
+            }
+            if ($result->num_rows > 0) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                echo "Plate: " . $row["plate"].
+                                " - Brand: " . $row["brand"]."<br>";}
+            } else {
+                echo "0 results in TRUCK";
+            }
+        ?>
     </p>
+    
     <p>
         <label for="car_plate">Car plate :</label>
-        <input type="text" name="car_plate">
+        <input type="text" name="car_plate"></br>
+        <?php
+            $sql = "SELECT * FROM car";
+            /* query database */
+            $result = $conn->query($sql);
+            if (!$result) {
+                trigger_error('Invalid query: ' . $conn->error);
+            }
+            if ($result->num_rows > 0) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                echo "Plate: " . $row["plate"].
+                                " - Brand: " . $row["brand"]. " - Color:" . $row["color"].
+                                " - Impounded:".$row["impounded"]. " -Serviced:".$row["serviced"]."<br>";}
+            } else {
+                echo "0 results in CAR";
+            }
+        ?>
     </p>
+    
     <p>
         <label for="init_loc">Initial Location :</label>
         <input type="text" name="init_loc">
@@ -67,7 +103,9 @@ include "../connection.php";
     <input type="submit" value="Submit">
 </form>
 
-
+<?php
+    mysqli_close($conn)
+?>
 </br></br>
 <a class="btn btn-primary btn-lg" href="../order.php" role="button">go back<a></br></br>
 </div>
