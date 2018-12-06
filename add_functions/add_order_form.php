@@ -38,7 +38,7 @@ include "../connection.php";
 ?>
 
 
-<h1>Add a ticket</h1>
+<h1>Add an order</h1>
 <h5>Please choose registered vehicles. If there are none, please add some.</h5>
 <form action="<?php $_PHP_SELF ?>" method="post">
     <p>
