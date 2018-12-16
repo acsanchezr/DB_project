@@ -5,7 +5,7 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Roboto:300|Niramit|Nunito" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="./style.css">
+<link rel="stylesheet" type="text/css" href="../style.css">
 <link rel="stylesheet" type="text/css" href="animate.css">
 <title>Add Record Form</title>
 </head>
@@ -19,8 +19,8 @@ include "../connection.php";
 
     /* This runs only after the form submitted */
 
-	if(isset($_POST['id']) && $_POST['id'] != "") {
-        $sql = "DELETE FROM ticket WHERE id = " . $_REQUEST['id'];
+	if(isset($_POST['truck_plate']) && $_POST['truck_plate'] != "") {
+        $sql = "DELETE FROM towed WHERE truck_plate = " . $_REQUEST['truck_plate'];
         $result = $conn->query($sql);
         if(!$result) {
             trigger_error('Invalid query: ' . $conn->error);
@@ -35,7 +35,7 @@ include "../connection.php";
 
 
     // Redisplay the page as normal
-    $sql = "SELECT * FROM ticket";
+    $sql = "SELECT * FROM towed";
 	/* query database */
 	$result = $conn->query($sql);
 	if (!$result) {
@@ -45,21 +45,21 @@ include "../connection.php";
 		    // output data of each row
         // output data of each row
       while($row = $result->fetch_assoc()) {
-      echo "Ticket ID: " . $row["ID"].
-              " - Reason: " . $row["reason"]. " - Description:" . $row["description"].
-              " - Date paid:".$row["date_paid"]. " - Time paid:".$row["time_paid"]."<br>";}
+				echo "Truck plate: " . $row["truck_plate"].
+							 " - Car plate: " . $row["car_plate"]. " - Initial Location:" . $row["init_loc"].
+							 " - Final location:".$row["final_loc"]. " - Date:".$row["date"]." - Time:".$row["time"]."<br>";}
     } else {
-        echo "0 results in TICKET";
+        echo "0 results in TOWED";
     }
 ?>
 
 <div class="functions">
-<h1>Delete a ticket</h1>
+<h1>Delete an order</h1>
 <form action="<?php $_PHP_SELF ?>" method="post">
-    <h3>Please type in an ID.</h3>
+    <h3>Please type in a truck plate.</h3>
     <p>
-        <label for="id">ID:</label>
-        <input type="text" name="id">
+        <label for="truck_plate">Truck plate:</label>
+        <input type="text" name="truck_plate">
     </p>
 
     <input type="submit" value="Submit">

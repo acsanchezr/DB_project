@@ -5,7 +5,7 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Roboto:300|Niramit|Nunito" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="./style.css">
+<link rel="stylesheet" type="text/css" href="../style.css">
 <link rel="stylesheet" type="text/css" href="animate.css">
 <title>Add Record Form</title>
 </head>
@@ -16,10 +16,10 @@
 
 include "../connection.php";
 /*rest of the code*/
-	
-    /* This runs only after the form submitted 
+
+    /* This runs only after the form submitted
        This can obviouly be improved than just a bunch of lazy ifs */
-    
+
     // This if is for when the user wants to change both the plate and brand
 	if(isset($_POST['plate']) && $_REQUEST['plate'] != "" && $_REQUEST['plate_n'] != "" && $_REQUEST['brand'] != "") {
         $plate_n = $_REQUEST['plate_n'];
@@ -96,7 +96,7 @@ include "../connection.php";
         <label for="brand">Brand:</label>
         <input type="text" name="brand">
     </p>
-    
+
     <input type="submit" value="Submit">
 
 </br></br>

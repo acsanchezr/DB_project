@@ -5,7 +5,7 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Roboto:300|Niramit|Nunito" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="./style.css">
+<link rel="stylesheet" type="text/css" href="../style.css">
 <link rel="stylesheet" type="text/css" href="animate.css">
 <title>Add Record Form</title>
 </head>
@@ -34,7 +34,7 @@ include "../connection.php";
         // The form was not filled so nothing should run untill it is and sent
       //  echo "Form not filled";
     }
-    
+
 ?>
 
 
@@ -61,7 +61,7 @@ include "../connection.php";
             }
         ?>
     </p>
-    
+
     <p>
         <label for="car_plate">Car plate :</label>
         <input type="text" name="car_plate"></br>
@@ -83,7 +83,7 @@ include "../connection.php";
             }
         ?>
     </p>
-    
+
     <p>
         <label for="init_loc">Initial Location :</label>
         <input type="text" name="init_loc">
